@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "58ca7d10-d066-4a5d-aa30-6d46c1ec92e8",
+		"name": "TestIntent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29372876"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/product/list"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Product 2\",\r\n    \"description\": \"Product 2\",\r\n    \"price\": 1231,\r\n    \"imageName\": \"img.jpg\",\r\n    \"img1\": \"img.jpg\",\r\n    \"img2\": \"img.jpg\",\r\n    \"img3\": \"img.jpg\",\r\n    \"category\": {\r\n        \"id\": 2,\r\n        \"name\": \"Clothing\"\r\n    },\r\n    \"style\": {\r\n        \"id\": 2,\r\n        \"name\": \"Streetwear\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/product/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Getbyid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/product/getbyid/3"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProByCate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/product/getprobycate/2"
+					},
+					"response": []
+				},
+				{
+					"name": "GetProByStyle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/product/getprobystyle/2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Style",
+			"item": [
+				{
+					"name": "GetAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": "http://localhost:8080/api/style/list"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vingate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/style/create"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/category/list"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Indoor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/category/create"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
